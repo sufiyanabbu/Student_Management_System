@@ -7,33 +7,33 @@ import java.util.Map;
 import model.Student;
 
 public class logic {
-   private List<Student> list = new ArrayList();
-   private Map<Integer, Student> map = new HashMap();
+   private List<Student> list = new ArrayList<>();
+   private Map<Integer, Student> map = new HashMap<>();
 
    public logic() {
    }
 
-   public boolean addStudent(int var1, String var2, String var3) {
-      if (this.map.containsKey(var1)) {
+   public boolean addStudent(int id, String name, String grades) {
+      if (map.containsKey(id)) {
          return false;
       } else {
-         Student var4 = new Student(var1, var2, var3);
-         this.list.add(var4);
-         this.map.put(var1, var4);
+         Student student = new Student(id, name, grades);
+         list.add(student);
+         map.put(id, student);
          return true;
       }
    }
 
-   public Student searchStudent(int var1) {
-      return (Student)this.map.get(var1);
+   public Student searchStudent(int id) {
+      return map.get(id);
    }
 
-   public boolean deleteStudent(int var1) {
-      Student var2 = (Student)this.map.remove(var1);
-      if (var2 == null) {
+   public boolean deleteStudent(int id) {
+      Student s = map.remove(id);
+      if (s == null) {
          return false;
       } else {
-         this.list.remove(var2);
+         list.remove(s);
          return true;
       }
    }
@@ -42,9 +42,9 @@ public class logic {
       if (this.list.isEmpty()) {
          System.out.println("NO DATA AVAILABLE.");
       } else {
-         for(Student var2 : this.list) {
+         for(Student std : this.list) {
             System.out.println("-----------------");
-            System.out.println(var2);
+            System.out.println(std);
          }
       }
 

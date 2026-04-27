@@ -5,25 +5,25 @@ public class Student {
    private String name;
    private String grades;
 
-   public Student(int var1, String var2, String var3) {
-      this.id = var1;
-      this.name = var2;
-      this.grades = var3;
+   public Student(int id, String name, String grades) {
+      this.id = id;
+      this.name = name;
+      this.grades = grades;
    }
 
    public int getid() {
-      return this.id;
+      return id;
    }
 
    public String getname() {
-      return this.name;
+      return name;
    }
 
    public String getgrades() {
-      return this.grades;
+      return grades;
    }
 
    public String toString() {
-      return "ID: " + this.id + " | NAME: " + this.name + " | GRADES: " + this.grades;
+      return "ID: " + id + " | NAME: " + name + " | GRADES: " +grades;
    }
 }
