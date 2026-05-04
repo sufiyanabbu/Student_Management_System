@@ -5,7 +5,7 @@ public class Student {
    private String name;
    private String grades;
 
-   public Student(int id, String name, String grades) {
+   public Student(int id, String name, String grades ) {
       this.id = id;
       this.name = name;
       this.grades = grades;
@@ -22,8 +22,9 @@ public class Student {
    public String getgrades() {
       return grades;
    }
-
    public String toString() {
-      return "ID: " + id + " | NAME: " + name + " | GRADES: " +grades;
+      return "ID: " + id + 
+      " | NAME: " + name + 
+      " | GRADES: " +grades;
    }
 }
