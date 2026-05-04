@@ -17,7 +17,16 @@ public class Main{
         System.out.println("4. DISPLAY ALL STUDENTS.");
         System.out.println("5. EXIT.");
             System.out.print("ENTER CHOICE: ");
-            int choice = sc.nextInt();
+            int choice;
+            try{
+            choice = sc.nextInt();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Invalid Choice! Enter Number Only ");
+            sc.nextLine();
+            continue;
+        }
         switch(choice){
             case 1:
                 System.out.print("ENTER ID: ");
@@ -57,10 +66,10 @@ public class Main{
                 else{
                     System.out.println("Not found");
                 }
+                
                 break;
                 case 4:
-                    System.out.println("======STUDENTS INFORMATION======");
-                    se.displayall();
+                    se.displayAll();
                     break;
                     case 5:
                         System.out.println("EXITING....");

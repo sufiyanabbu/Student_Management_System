@@ -13,6 +13,7 @@ A Java-based backend project to manage student records including creation, updat
 
 * Java
 * Collections (List, HashMap, HashSet)
+* Updated JDBC
 
 ## Future Improvements
 
